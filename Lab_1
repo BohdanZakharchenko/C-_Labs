@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace C__Lab_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double a, b, c;
+            Console.WriteLine("Введіть значення a:");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введіть значення b:");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введіть значення c:");
+            c = double.Parse(Console.ReadLine());
+
+            if (a + b > c && b + c > a && a + c > b)
+            {
+                double p = (a + b + b) / 2;
+                double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+                Console.WriteLine($"Площа трикутника: {s}");
+            }
+            else {
+                Console.WriteLine("Трикутника не існує");
+            }
+        }
+    }
+}

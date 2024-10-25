@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CS_Lab2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] rndArray = new int[10];
+            Random random = new Random();
+
+            for(int i=0; i< rndArray.Length; ++i) 
+            {
+
+                rndArray[i] = random.Next(1, 99);
+                Console.WriteLine(rndArray[i]);
+            }
+
+            int max = rndArray[0];
+            foreach (int num in rndArray)
+            {
+                if (num > max)
+                {
+                    max = num;
+                }
+            }
+
+            Console.WriteLine("Максимальне значення елементу масиву: " + max);
+
+            //Console.WriteLine("Максимальне значення елементу масиву: " + rndArray.Max());   
+        }
+
+    }
+}
